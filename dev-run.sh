@@ -1,1 +1,1 @@
-docker run --name node-app-dev -v $(pwd):/app -v /app/node_modules -p 3000:3000 -d node-docker-dev
+docker run --name node-app-dev -v $(pwd):/app:ro -v /app/node_modules -p 3000:3000 -d node-docker-dev
