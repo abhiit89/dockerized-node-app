@@ -1,0 +1,1 @@
+docker scan --file=Dockerfile.dev node-docker-dev
