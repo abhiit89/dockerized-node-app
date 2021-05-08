@@ -13,3 +13,7 @@
 ## Delete all docker volumes
 
 `docker volume prune`
+
+## List all docker volumes
+
+`docker volume ls`
