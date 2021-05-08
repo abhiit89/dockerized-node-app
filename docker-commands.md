@@ -20,7 +20,7 @@
 
 ## Docker compoese up with Production Dockerfile
 
-`docker-compose up`
+`docker-compose up -d --build`
 
 ## Docker compoese down with Production Dockerfile without deleting volumes
 
@@ -32,7 +32,7 @@
 
 ## Docker compoese up with Development Dockerfile
 
-`docker-compose -f docker-compose-dev.yml up`
+`docker-compose -f docker-compose-dev.yml up -d --build`
 
 ## Docker compoese down with Development Dockerfile without deleting volumes
 
