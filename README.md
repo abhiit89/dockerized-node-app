@@ -43,5 +43,5 @@ After the Docker image is pushed to the registry the deployment workflow will ki
 
 
 #  Notes
-In Order to run the nodejs app in production container, **pm2** is not really a requirement a simple
+In Order to run the nodejs app in production container, [**pm2**](https://pm2.keymetrics.io/docs/usage/docker-pm2-nodejs/) is not really a requirement a simple
 `node index.js`  will suffice as the container will be run by a Container Orchestration Framework, it will be ephemeral and new will be created once a container died.
