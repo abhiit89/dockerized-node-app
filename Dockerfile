@@ -1,4 +1,4 @@
-FROM node:15-alpine3.10
+FROM node:12-alpine3.10
 
 WORKDIR /app
 
@@ -10,4 +10,8 @@ COPY . ./
 
 EXPOSE 3000
 
-CMD [ "npm", "start" ] 
+RUN npm install pm2 -g
+
+CMD [ "pm2-runtime", "index.js"] 
+
+# in case of actual application, CMD will be ["node","index.js"]
