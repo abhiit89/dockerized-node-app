@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "pm2 start index.js",
+    "stop": "pm2 stop all",
     "dev": "nodemon index.js"
   },
   "keywords": [],
