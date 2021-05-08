@@ -8,7 +8,9 @@ RUN npm install --production
 
 COPY . ./
 
-EXPOSE 3000
+ENV PORT 3000
+
+EXPOSE $PORT
 
 RUN npm install pm2 -g
 
