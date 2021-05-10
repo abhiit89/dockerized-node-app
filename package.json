@@ -30,6 +30,12 @@
     "*.{js}": "eslint --ext .js --ignore-path .gitignore",
     "*.js": "eslint --cache --fix"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "echo hello world && lint-staged",
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+    }
+  },
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
