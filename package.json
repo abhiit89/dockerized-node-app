@@ -17,9 +17,16 @@
     "pm2": "^4.5.6"
   },
   "devDependencies": {
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.2.0",
+    "eslint": "^7.26.0",
     "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
     "nodemon": "^2.0.7",
     "rimraf": "^3.0.2"
+  },
+  "lint-staged": {
+    "*.{js}": "eslint --ext .js --ignore-path .gitignore"
   },
   "config": {
     "commitizen": {
@@ -28,8 +35,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "echo \" This is a pre-commit message\" ",
-    "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+      "pre-commit": "lint-staged",
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
     }
   }
 }
