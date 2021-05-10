@@ -1,25 +1,42 @@
 {
-  "name": "shared-docker-file",
+  "name": "dockerized-node-app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js",
-    "start": "node index.js"
+    "clean": "rimraf node_modules",
+    "start:prod": "pm2 start index.js",
+    "stop:prod": "pm2 stop all"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "pm2": "^4.5.6"
   },
   "devDependencies": {
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.2.0",
+    "eslint": "^7.26.0",
     "husky": "^6.0.0",
-    "nodemon": "^2.0.7"
+    "lint-staged": "^11.0.0",
+    "nodemon": "^2.0.7",
+    "rimraf": "^3.0.2"
+  },
+  "lint-staged": {
+    "*.{js}": "eslint --ext .js --ignore-path .gitignore"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   },
   "husky": {
     "hooks": {
-      "pre-commit": "echo \"[Husky] pre-commit\""
+      "pre-commit": "echo Hello World",
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
     }
   }
 }
