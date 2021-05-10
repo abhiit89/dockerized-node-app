@@ -8,7 +8,8 @@
     "clean": "rimraf node_modules",
     "start:prod": "pm2 start index.js",
     "stop:prod": "pm2 stop all",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test": "echo \"This is husky pre-commit hook\""
   },
   "keywords": [],
   "author": "",
