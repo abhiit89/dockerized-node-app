@@ -6,8 +6,13 @@ Simple NodeJs Express Application to Understand the deployment workflow of a nod
 
 Code is written using Javascript but same flows can be extended to the typescript project as well.
 
-  
-  
+Purpose of this project is not to explore the javascript or typescript or express but it is to learn about using docker, docker-compose, kubernetes, kind, minkube, helm and skaffold to build the application.
+
+Also learning about the OSS stacks(prometheus, grafana, jaeger, kiali, loki, fluentd) and service mesh (istio), around how to use them for monitoring and debugging. Set these up in local cluster using  kind or minikube.
+
+Once the OSS is deployed, we will modify the nodejs app with required library and configuration changes to see the metrics, traces and logs in grafana.
+
+Next step will be deploy all this, application and OSS, in cloud managed k8s cluster and see the results there.
 
 #  Dev Setup
 
