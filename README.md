@@ -6,7 +6,11 @@ Simple NodeJs Express Application to Understand the deployment workflow of a nod
 
 Code is written using Javascript but same flows can be extended to the typescript project as well.
 
-Purpose of this project is not to explore the javascript or typescript or express but it is to learn about using docker, docker-compose, kubernetes, kind, minkube, helm and skaffold to build the application.
+Purpose of this project is not to explore the javascript or typescript or express but it is to learn about using docker, docker-compose, kubernetes, kind, minkube, helm and skaffold to build the application. 
+
+Also to understand the setup steps, for typescript, and adding the required auxilary things like commit hooks via husky, commit message via commitizen, linting via eslint or prettier and Unit Testing via Jest (should have 100% code coverage). 
+
+This repo will serve as a template for future nodejs projects and those will build on top of this as this repo already contains the required configurations in terms of required node_modules or dockerfiles or docker-compose files or skaffold files(for k8s development).
 
 Also learning about the OSS stacks(prometheus, grafana, jaeger, kiali, loki, fluentd) and service mesh (istio), around how to use them for monitoring and debugging. Set these up in local cluster using  kind or minikube.
 
