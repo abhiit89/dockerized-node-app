@@ -5,18 +5,14 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js",
-    "clean": "rimraf node_modules",
-    "start:prod": "pm2 start index.js",
-    "stop:prod": "pm2 stop all",
-    "prepare": "husky install",
+    "start": "node index.js",
     "test": "echo \"This is husky pre-commit hook\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
-    "pm2": "^4.5.6"
+    "express": "^4.17.1"
   },
   "devDependencies": {
     "commitizen": "^4.2.4",
@@ -24,8 +20,7 @@
     "eslint": "^7.26.0",
     "husky": "^6.0.0",
     "lint-staged": "^11.0.0",
-    "nodemon": "^2.0.7",
-    "rimraf": "^3.0.2"
+    "nodemon": "^2.0.7"
   },
   "lint-staged": {
     "*.{js}": "eslint --ext .js --ignore-path .gitignore",
