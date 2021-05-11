@@ -52,3 +52,9 @@ In Order to run the nodejs app in production container, [**pm2**](https://pm2.ke
 
 [npm-gui](https://www.npmjs.com/package/npm-gui)
 
+[dockerignore-1](https://medium.com/@LihauTan/took-me-hours-to-realise-why-docker-build-ignores-my-dockerignore-and-this-is-what-ive-learned-2f87c770ea9c)
+
+[dockerignore](https://codefresh.io/docker-tutorial/not-ignore-dockerignore-2/)
+
+
+
