@@ -1,1 +1,1 @@
-docker run --name node-app -p 3000:3000 -d node-docker
+docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build

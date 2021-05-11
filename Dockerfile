@@ -4,7 +4,12 @@ WORKDIR /app
 
 COPY package.json .
 
-RUN npm install --production
+ARG NODE_ENV
+
+RUN if [ "$NODE_ENV" = "development" ]; \
+        then npm install; \
+        else npm install --only=production; \
+        fi
 
 COPY . ./
 
@@ -12,8 +17,4 @@ ENV PORT 3000
 
 EXPOSE $PORT
 
-RUN npm install pm2 -g
-
-CMD [ "pm2-runtime", "index.js"] 
-
-# in case of actual application, CMD will be ["node","index.js"]
+CMD [ "npm", "start"] 
