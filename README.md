@@ -27,7 +27,7 @@ In order to run the process, we use
 
   
 
-Post changes(code change and unit tests ) are done a new **docker image** is build containing only *Production Dependencies* and code changes. It has to be very light and small.
+Post changes (code change and unit tests ) are done a new **docker image** is build containing only *Production Dependencies* and code changes. It has to be very light and small.
 
 After that the said **docker image** is scanned for vulnerabilities.
 
@@ -45,6 +45,14 @@ After the Docker image is pushed to the registry the deployment workflow will ki
 #  Notes
 In Order to run the nodejs app in production container, [**pm2**](https://pm2.keymetrics.io/docs/usage/docker-pm2-nodejs/) is not really a requirement a simple
 `node index.js`  will suffice as the container will be run by a Container Orchestration Framework, it will be ephemeral and new will be created once a container died.
+
+Under the **optional_docker_setup** folder, there is an alternate way of writing the dockefile and docker-compose yml files is presented. A seperate set of files are defined for each dev and prod env.
+
+At the **root** level, The dockerfile and docker-compose yml files are defined so that the dockerfile is shared and we have just different docker-compose files, **docker-compose.dev.yml for dev** and **docker-compose.prod.yml for prod** along with **docker-compose.yml** file which contains the shared configurations between dev and prod env.
+
+One other significant change is in the **Dockerfile** where `npm install` command is executed based on the value of **ARGS** **NODE_ENV** which is been set in the docker-compose.ENV_NAME.yml for each env.
+
+The approach defined at the **root level** to setup the dockerfile and docker-compose yml file is the **preferred** **approach**.
 
 # Articles 
 
