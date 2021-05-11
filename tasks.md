@@ -1,6 +1,7 @@
 # Pending Tasks After the [Course](https://www.youtube.com/watch?v=9zUHg7xjIqQ&list=PL2uo0RBZRY1D5RZfji5AUepbsjEF1VmzX&index=2) is completed
 
 - [ ] Convert the code to typescript
+- [ ] Add the https support to the express api
 - [ ] Modify the dockerfile to use typescript
 - [ ] Modify the docker-compose yml files to use ts-node in dev from src folder
 - [ ] Modify the docker-compose yml files to use node in prod from dist folder
